@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
 
 
         // below line is to add on click listener for our add course button.
-        addCourseBtn.setOnClickListener(View.OnClickListener { // below line is to get data from all edit text fields.
+        addCourseBtn.setOnClickListener(){ // below line is to get data from all edit text fields.
             if (courseName.isEmpty() && courseTracks.isEmpty() && courseDuration.isEmpty() && courseDescription.isEmpty()) {
                 Toast.makeText(applicationContext, "Please enter all the data..", Toast.LENGTH_LONG).show()
-                return@OnClickListener
+                
             }
 
             // on below line we are calling a method to add new
@@ -48,6 +48,6 @@ class MainActivity : AppCompatActivity() {
             courseDurationEdt.setText("")
             courseTracksEdt.setText("")
             courseDescriptionEdt.setText("")
-        })
+        }
     }
 }
